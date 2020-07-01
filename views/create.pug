@@ -1,0 +1,31 @@
+extends layout.pug
+
+
+block content
+  form(method="post" action='/create')
+    div
+    label(for='csrf')
+      input(type='hidden' value="csrfToken" name='_csrf')
+    div
+      label(for='firstName') Enter your First Name:
+      input(type='text' value="First Name" name='firstName')
+    div
+      label(for='lastName') Enter your Last Name:
+      input(type='text' value="Last Name" name='lastName')
+    div
+      label(for='email') Enter your Email:
+      input(type='email' value="Email" name='email')
+    div
+      label(for='password') Enter your Password:
+      input(type='password' value="Password" name='password')
+    div
+      label(for='confirmedPassword') Please Confirm Password:
+      input(type='password' value="Confirm Password" name='confirmedPassword')
+    div
+      input(type='submit' value='Create User')
+
+//- if err.length > 0
+//-   div
+//-     ul
+//-       each error in err
+//-         li= error

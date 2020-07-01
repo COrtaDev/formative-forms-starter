@@ -1,0 +1,60 @@
+extends layout.pug
+
+block content
+  h2 Existing Users
+  table
+    thead
+      tr
+        th id
+        th First Name
+        th Last Name
+        th Email
+        th Age
+        th Favorite Beatle
+        th Likes Ice Cream
+
+    tbody
+      each user in users
+        tr
+          td= user.id
+          td= user.firstName
+          td= user.lastName
+          td= user.email
+          td= user.age
+          td= user.favBeatle
+          td= user.iceCream
+
+
+//- console.log($("a"))
+
+//-   Existing Users is the name of the hs to create here
+  These would be the columns:
+    ("id");
+    ("First Name");
+    ("Last Name");
+    ("Email");
+    ("Age");
+    ("Favorite Beatle");
+    ("Likes Ice Cream");
+    expect(tableCells.eq(0).text()).to.equal("1");
+    expect(tableCells.eq(1).text()).to.equal("Jill");
+    expect(tableCells.eq(2).text()).to.equal("Jack");
+    expect(tableCells.eq(3).text()).to.equal("jill.jack@gmail.com");
+
+
+
+
+
+
+
+
+
+    //- 1) renders three navigation links
+    //- 2) renders a navigation link to nagivate to '/'
+    //- 3) renders a navigation link to nagivate to '/create'
+    //- 4) renders a navigation link to nagivate to '/create-interesting'
+    //- 5) renders an h2 header for the table
+    //- 6) renders a table
+    //- 7) renders seven th elements with the correct header text
+    //- 8) renders seven td elements
+    //- 9) renders the first user in the table//
